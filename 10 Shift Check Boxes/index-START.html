@@ -107,10 +107,11 @@
     let inBetween = false;
     if(e.shiftKey && this.checked) {
       checkboxs.forEach(checkbox => {
+        console.log(checkbox);
         if(checkbox === this || checkbox === lastCheck) {
           inBetween = !inBetween;
+          console.log('go check this');
         }
-
         if (inBetween) {
           //console.log(checkbox);
           checkbox.checked = true;
