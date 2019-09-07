@@ -49,6 +49,7 @@ rangeButton.forEach(rangeBtn => rangeBtn.addEventListener('mousemove', handleRan
 
 let mousedown = false;
 progress.addEventListener('click', scrub);
+// a && b = do A then do B not a if function
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
