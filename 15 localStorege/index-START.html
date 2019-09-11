@@ -73,13 +73,13 @@
   // homework
   const checkAll = document.querySelector('[name=checkAll]');
   const clearAll = document.querySelector('[name=clearAll]');
-  const getAll = itemsList.querySelectorAll('input');
 
   function checkAllItems() {
+    const getAll = itemsList.querySelectorAll('input');
     getAll.forEach(item => {
-      if (!item.checked) {
+      const index = item.dataset.index;
+      if (items[index].done === false) {
         // item.checked = true;
-        const index = item.dataset.index;
         items[index].done = !items[index].done;
       };
     });
@@ -89,9 +89,10 @@
   }
   
   function clearAllItems() {
+    const getAll = itemsList.querySelectorAll('input');
     getAll.forEach(item => {
-      if (item.checked) {
-        const index = item.dataset.index;
+      const index = item.dataset.index;
+      if (items[index].done === true) {
         items[index].done = !items[index].done;
       };
     });
