@@ -48,6 +48,8 @@
       let { offsetX: x, offsetY: y } = e;
 
       // dismiss the text
+      // this: the things you listen on
+      // target: the things you trigger on
       if (this != e.target) {
         x = x + e.target.offsetLeft;
         y = y + e.target.offsetTop;
